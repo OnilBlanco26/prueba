@@ -33,11 +33,7 @@ const Formulario = ({pacientes, setPacientes}) => {
 
   return (
     <div className='md:w-1/2 lg:w-2/5'>
-        {error && <Error>
-            <p>
-              TODOS LOS PACIENTES SON OBLIGATORIO
-            </p>
-          </Error>}
+       
         <h2 className='text-center text-3xl font-bold'>
             Formulario Pacientes
         </h2>
@@ -48,7 +44,12 @@ const Formulario = ({pacientes, setPacientes}) => {
             </span>
         </p>
 
-        <form className='bg-white py-10 px-5 rounded-md shadow-md shadow-indigo-600 mx-2'>
+        <form onSubmit={handleSubmit} className='bg-white py-10 px-5 rounded-md shadow-md shadow-indigo-600 mx-2'>
+        {error && <Error>
+            <p>
+              TODOS LOS CAMPOS SON OBLIGATORIO
+            </p>
+          </Error>}
           <div className='mb-3'>
             <label htmlFor="mascota" className='block text-indigo-600 font-bold'>
               Nombre Mascota 
