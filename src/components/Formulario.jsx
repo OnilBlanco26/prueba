@@ -1,6 +1,25 @@
-import React from 'react'
+import {useState, useEffect} from 'react'
 
 const Formulario = () => {
+
+  const [mascota, setMascota] = useState('');
+  const [propietario, setPropietario]= useState('');
+  const [email, setEmail] = useState('');
+  const [fecha, setFecha] = useState('');
+  const [sintomas, setSintomas] = useState('');
+  const [error, setError] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if([mascota, propietario, email, fecha, sintomas].includes('')){
+      setError(true);
+      return;
+    }
+    setError(false);
+
+    
+  }
+
   return (
     <div className='md:w-1/2 lg:w-2/5'>
         <h2 className='text-center text-3xl font-bold'>
