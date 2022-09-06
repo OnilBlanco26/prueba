@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import Error from './Error'
 
 const Formulario = ({pacientes, setPacientes}) => {
 
@@ -32,6 +33,11 @@ const Formulario = ({pacientes, setPacientes}) => {
 
   return (
     <div className='md:w-1/2 lg:w-2/5'>
+        {error && <Error>
+            <p>
+              TODOS LOS PACIENTES SON OBLIGATORIOS
+            </p>
+          </Error>}
         <h2 className='text-center text-3xl font-bold'>
             Formulario Pacientes
         </h2>
