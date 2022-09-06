@@ -6,12 +6,19 @@ import Listado from './components/Listado'
 
 function App() {
 
+  const [pacientes,setPacientes] = useState([]);
 
   return (
+
+    
+
     <div>
       <Header />
       <div className='mt-10 md:flex'>
-        <Formulario />
+        <Formulario 
+          pacientes={pacientes}
+          setPacientes={setPacientes}
+        />
         <Listado />
       </div>
     </div>
