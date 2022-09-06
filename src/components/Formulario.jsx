@@ -26,6 +26,7 @@ const Formulario = ({pacientes, setPacientes}) => {
       sintomas
     }
     //Agregar el paciente al state
+    setPacientes([...pacientes, nuevoPaciente])
 
   }
 
