@@ -1,8 +1,9 @@
 import React from 'react'
+import Pacientes from './Pacientes'
 
 const Listado = () => {
   return (
-    <div className='md:w-1/2 lg:w-3/5'>
+    <div className='md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll'>
         <h2 className='text-3xl text-center font-bold'>
             Listado Pacientes
         </h2>
@@ -12,6 +13,12 @@ const Listado = () => {
                 Registrados
             </span>
         </p>
+
+        <Pacientes />
+        <Pacientes />
+        <Pacientes />
+        <Pacientes />
+        <Pacientes />
 
        
     </div>
