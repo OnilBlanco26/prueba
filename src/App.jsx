@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <Header />
-      <div>
+      <div className='mt-10 md:flex'>
         <Formulario />
         <Listado />
       </div>
