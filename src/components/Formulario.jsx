@@ -35,7 +35,7 @@ const Formulario = ({pacientes, setPacientes}) => {
     <div className='md:w-1/2 lg:w-2/5'>
         {error && <Error>
             <p>
-              TODOS LOS PACIENTES SON OBLIGATORIOS
+              TODOS LOS PACIENTES SON OBLIGATORIO
             </p>
           </Error>}
         <h2 className='text-center text-3xl font-bold'>
